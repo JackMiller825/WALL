@@ -207,14 +207,16 @@ section[id] {
 }
 
 .hero {
+  position: relative;
+  z-index: 1;
   background: #0b6cae;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-stage {
   position: relative;
   height: clamp(480px, 40vw, 580px);
-  isolation: isolate;
+  overflow: visible;
 }
 
 .hero-bg,
@@ -317,14 +319,16 @@ section[id] {
 }
 
 .hero-surf {
-  z-index: 4;
+  z-index: 3;
   left: 0;
   right: 0;
-  bottom: -6%;
+  bottom: -130px;
   width: 100%;
-  height: 42%;
+  height: 74%;
   object-fit: cover;
-  object-position: center 72%;
+  object-position: center 58%;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 24%, transparent 40%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 24%, transparent 40%);
 }
 
 .hero-accent {
@@ -349,9 +353,19 @@ section[id] {
 
 .crew {
   position: relative;
+  z-index: 2;
+  margin-top: -120px;
   padding: 8px 0 0;
-  background: linear-gradient(180deg, #1477b8 0%, #e7f3f8 18%, #f6edd6 42%, #f3e6c8 100%);
-  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #0b6cae 0 240px,
+    #1286c0 300px,
+    #b7e3f3 280px,
+    #f6edd6 390px,
+    #f3e6c8 calc(100% - 280px),
+    transparent calc(100% - 250px)
+  );
+  overflow: visible;
 }
 
 .crew-accent {
@@ -375,18 +389,34 @@ section[id] {
 
 .crew-heading {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   display: grid;
   justify-items: center;
-  margin: 0 0 -36px;
+  margin: -96px 0 -36px;
+}
+
+.crew-heading::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 54%;
+  width: min(560px, 52%);
+  height: 34%;
+  transform: translate(-50%, -50%);
+  border-radius: 48px;
+  background: linear-gradient(180deg, #0b6f9e 0%, #01284f 100%);
 }
 
 .crew-title-wave {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: min(980px, 100%);
-  height: 168px;
+  width: min(1080px, 94vw);
+  height: auto;
+  aspect-ratio: 3.35 / 1;
   object-fit: cover;
-  object-position: center;
+  object-position: center 46%;
   pointer-events: none;
 }
 
@@ -424,6 +454,7 @@ section[id] {
 
 .crew h2 {
   position: absolute;
+  z-index: 2;
   top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -497,12 +528,16 @@ section[id] {
 
 .crew-exit-wave {
   display: block;
+  position: relative;
+  z-index: 3;
   width: 100%;
-  height: 96px;
-  margin-top: -8px;
+  height: clamp(170px, 18vw, 260px);
+  margin: 8px 0 -230px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 51%;
   pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 8%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 8%, #000 72%, transparent 100%);
 }
 
 .lightbox {
@@ -545,8 +580,9 @@ section[id] {
 
 .story {
   position: relative;
-  padding: 36px 0 0;
-  overflow: hidden;
+  z-index: 1;
+  padding: 150px 0 0;
+  overflow: visible;
   background: #06284a;
 }
 
@@ -622,7 +658,8 @@ section[id] {
 
 .ocean-run {
   position: relative;
-  overflow-x: clip;
+  z-index: 2;
+  overflow: visible;
   color: var(--cream);
   background-color: #04182c;
   background-image:
@@ -665,17 +702,19 @@ section[id] {
 .wave-divider {
   display: block;
   width: 100%;
-  height: 92px;
-  margin: -64px 0 0;
+  height: clamp(150px, 16.5vw, 236px);
+  margin: -120px 0 -88px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 51%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 58%, transparent 100%);
 }
 
 .wave-divider-before-community {
-  margin: 10px 0 -18px;
+  margin: -72px 0 -96px;
 }
 
 .token,
@@ -687,11 +726,11 @@ section[id] {
 }
 
 .token {
-  padding: 22px 0 34px;
+  padding: 86px 0 34px;
 }
 
 .join {
-  padding: 18px 0 42px;
+  padding: 18px 0 28px;
 }
 
 .token h2,
@@ -852,7 +891,7 @@ section[id] {
 
 .community {
   min-height: 520px;
-  padding: 28px 0 48px;
+  padding: 78px 0 48px;
   overflow: hidden;
 }
 
@@ -1160,10 +1199,12 @@ section[id] {
 
   .hero-surf {
     position: relative;
-    z-index: 4;
-    height: 150px;
+    z-index: 3;
+    height: 190px;
     bottom: auto;
-    margin-top: -36px;
+    margin: -20px 0 -70px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 70%, transparent 100%);
   }
 
   .hero-bubbles,
@@ -1188,8 +1229,15 @@ section[id] {
     white-space: nowrap;
   }
 
+  .crew {
+    margin-top: -36px;
+    padding-top: 0;
+    background: linear-gradient(180deg, #0b6cae 0 110px, #9fd4ee 170px, #f6edd6 250px, #f3e6c8 calc(100% - 150px), transparent 100%);
+  }
+
   .crew-title-wave {
-    height: 112px;
+    height: auto;
+    aspect-ratio: 3.5 / 1;
   }
 
   .eyebrow {
@@ -1287,9 +1335,12 @@ section[id] {
     width: min(var(--content), calc(100% - 28px));
   }
 
-  .crew,
+  .crew {
+    padding-top: 8px;
+  }
+
   .story {
-    padding-top: 28px;
+    padding-top: 78px;
   }
 
   .ocean-run::before,
