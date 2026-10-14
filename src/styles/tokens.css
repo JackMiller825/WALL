@@ -1,0 +1,68 @@
+:root {
+  --ink: #102033;
+  --ink-soft: #3e5368;
+  --cream: #fff8ee;
+  --cream-deep: #f4e7c8;
+  --sand: #f6edd6;
+  --navy: #07182e;
+  --ocean: #08243f;
+  --ocean-mid: #0c4f78;
+  --whale: #3e86b8;
+  --aqua: #2bb8c4;
+  --gold: #f0c14a;
+  --gold-deep: #e39b16;
+  --orange: #f47a1a;
+  --card: #fffaf3;
+  --royal: #1565a8;
+  --header-height: 74px;
+  --content: 1180px;
+  --font-display: "Arial Black", "Segoe UI", Impact, "Trebuchet MS", sans-serif;
+  --font-body: "Segoe UI", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Mono", "Segoe UI Mono", Consolas, ui-monospace, monospace;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(1200px 420px at 50% -80px, #fff4dc 0%, transparent 70%),
+    var(--cream);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+}

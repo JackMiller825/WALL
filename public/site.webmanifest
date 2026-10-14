@@ -1,0 +1,16 @@
+{
+  "name": "Whale Street",
+  "short_name": "$WALL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8ee",
+  "theme_color": "#07182e",
+  "icons": [
+    {
+      "src": "/assets/brand/whale-street-logo.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
