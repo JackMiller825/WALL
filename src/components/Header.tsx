@@ -24,6 +24,7 @@ export function Header({ activeId }: HeaderProps) {
     <header className="site-header">
       <a className="brand" href="#home" onClick={() => setOpen(false)}>
         <img src={logo} alt="Whale Street $WALL" width={1254} height={1254} />
+        <span className="brand-name" aria-hidden="true">WHALE STREET</span>
       </a>
       <button
         className="nav-toggle"

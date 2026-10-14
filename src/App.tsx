@@ -74,6 +74,7 @@ export function App() {
           <WaveDivider />
           <Tokenomics />
           <HowToJoin />
+          <WaveDivider className="wave-divider-before-community" />
           <Community />
         </div>
       </main>

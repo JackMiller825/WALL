@@ -44,7 +44,6 @@ export function Footer() {
           </li>
         ))}
       </ul>
-      <p className="footer-mark">WHALE STREET · {site.ticker}</p>
-    </footer>
+      </footer>
   )
 }

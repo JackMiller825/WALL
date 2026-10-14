@@ -26,7 +26,7 @@ export const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'crew', label: 'Meet the Crew' },
   { id: 'story', label: 'Our Story' },
-  { id: 'token', label: 'Token Info' },
+  { id: 'token', label: 'Tokenomics' },
   { id: 'join', label: 'How to Join' },
   { id: 'community', label: 'Community' },
 ] as const
