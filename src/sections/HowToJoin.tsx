@@ -5,29 +5,29 @@ const steps = [
     title: 'GET A WALLET',
     body: 'Set up a self-custody wallet and keep the recovery phrase offline.',
     pending: httpsUrl(site.walletGuideUrl) === null,
-    note: 'Official wallet link pending',
-    icon: 'wallet',
+    note: 'Wallet link pending',
+    icon: '/assets/supplemental/icons/how-to-join/wallet.svg',
   },
   {
     title: 'GET SOME CRYPTO',
     body: 'Add the network token you will need for a swap. The chain is not confirmed yet.',
     pending: site.chain === null,
     note: 'Chain pending',
-    icon: 'coins',
+    icon: '/assets/supplemental/icons/how-to-join/coins.svg',
   },
   {
     title: 'SWAP FOR $WALL',
     body: 'Use the official swap only after the contract is published. Trading is not live.',
     pending: httpsUrl(site.swapUrl) === null || site.contractAddress === null,
-    note: 'Contract and swap pending',
-    icon: 'swap',
+    note: 'Swap pending',
+    icon: '/assets/supplemental/icons/how-to-join/swap.svg',
   },
   {
     title: 'JOIN THE CREW',
     body: 'Come aboard through the confirmed community links when they are published.',
-    pending: httpsUrl(site.telegramUrl) === null && httpsUrl(site.xUrl) === null && httpsUrl(site.discordUrl) === null,
+    pending: httpsUrl(site.telegramUrl) === null && httpsUrl(site.xUrl) === null,
     note: 'Community links pending',
-    icon: 'crew',
+    icon: '/assets/supplemental/icons/how-to-join/crew.svg',
   },
 ] as const
 
@@ -39,50 +39,26 @@ export function HowToJoin() {
         <ol className="join-steps">
           {steps.map((step, index) => (
             <li key={step.title} className="join-step">
-              <span className="step-number" aria-hidden="true">
-                {index + 1}
-              </span>
-              <StepIcon name={step.icon} />
-              <h3>{step.title}</h3>
-              <p>{step.body}</p>
-              {step.pending && <p className="step-pending">{step.note}</p>}
+              {index > 0 && (
+                <img
+                  className="step-arrow"
+                  src="/assets/supplemental/icons/ui/arrow-right.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              )}
+              <div className="join-card">
+                <span className="step-number">{index + 1}</span>
+                <img src={step.icon} alt="" width={72} height={72} />
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+                {step.pending && <p className="step-pending">{step.note}</p>}
+              </div>
             </li>
           ))}
         </ol>
-        <p className="join-note">Chain, wallet, exchange, and contract details stay pending until they are confirmed.</p>
       </div>
     </section>
-  )
-}
-
-function StepIcon({ name }: { name: (typeof steps)[number]['icon'] }) {
-  if (name === 'coins') {
-    return (
-      <svg className="step-icon" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="26" cy="34" r="12" fill="#7fd4ea" />
-        <circle cx="38" cy="28" r="12" fill="#d7f4ff" />
-      </svg>
-    )
-  }
-  if (name === 'swap') {
-    return (
-      <svg className="step-icon" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M18 26h28l-8-8M46 38H18l8 8" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    )
-  }
-  if (name === 'crew') {
-    return (
-      <svg className="step-icon" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="24" r="8" fill="#f0c14a" />
-        <path d="M16 48c2-10 8-14 16-14s14 4 16 14" fill="#7fd4ea" />
-      </svg>
-    )
-  }
-  return (
-    <svg className="step-icon" viewBox="0 0 64 64" aria-hidden="true">
-      <rect x="14" y="22" width="36" height="26" rx="4" fill="#7fd4ea" />
-      <path d="M14 30h36M24 22v-4a8 8 0 0 1 16 0v4" fill="none" stroke="#fff" strokeWidth="3" />
-    </svg>
   )
 }

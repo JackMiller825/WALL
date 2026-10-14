@@ -9,7 +9,8 @@ import { Crew } from './sections/Crew.tsx'
 import { Hero } from './sections/Hero.tsx'
 import { HowToJoin } from './sections/HowToJoin.tsx'
 import { Story } from './sections/Story.tsx'
-import { TokenInfo } from './sections/TokenInfo.tsx'
+import { Tokenomics } from './sections/Tokenomics.tsx'
+import { WaveDivider } from './components/WaveDivider.tsx'
 
 const Dashboard = lazy(() => import('./dashboard/Dashboard.tsx'))
 
@@ -69,9 +70,12 @@ export function App() {
         <Hero />
         <Crew />
         <Story />
-        <TokenInfo />
-        <HowToJoin />
-        <Community />
+        <div className="ocean-run">
+          <WaveDivider />
+          <Tokenomics />
+          <HowToJoin />
+          <Community />
+        </div>
       </main>
       <Footer />
     </>

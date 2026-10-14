@@ -13,8 +13,14 @@ export const site = {
   swapUrl: null as string | null,
   telegramUrl: null as string | null,
   xUrl: null as string | null,
-  discordUrl: null as string | null,
 }
+
+export const tokenomics = [
+  { id: 'supply', label: 'Total Supply', value: '1B', icon: '/assets/supplemental/icons/tokenomics/supply.svg' },
+  { id: 'tax', label: 'Tax', value: '0%', icon: '/assets/supplemental/icons/tokenomics/tax.svg' },
+  { id: 'lp', label: 'LP', value: 'Burn', icon: '/assets/supplemental/icons/tokenomics/lp-burn.svg' },
+  { id: 'ownership', label: 'Ownership', value: 'Renounce', icon: '/assets/supplemental/icons/tokenomics/ownership-renounced.svg' },
+] as const
 
 export const navItems = [
   { id: 'home', label: 'Home' },
@@ -45,5 +51,5 @@ export function displayOrPending(value: string | null): string {
 
 /** Official community destination, or the on-page community section until one is set. */
 export function communityDestination(): string {
-  return httpsUrl(site.telegramUrl) ?? httpsUrl(site.discordUrl) ?? httpsUrl(site.xUrl) ?? '#community'
+  return httpsUrl(site.telegramUrl) ?? httpsUrl(site.xUrl) ?? '#community'
 }

@@ -1,7 +1,7 @@
 import { communityDestination } from '../config/site.ts'
 import { ActionLink } from '../components/ActionLink.tsx'
 
-const mascot = '/assets/brand/whale-street-mascot.png'
+const scene = '/assets/supplemental/sections/story-ship-scene.png'
 
 export function Story() {
   return (
@@ -20,10 +20,10 @@ export function Story() {
         </div>
         <figure className="story-art">
           <img
-            src={mascot}
-            alt="The Whale Street BullWhale mascot, blue with a cream belly, gold horns, and a wide grin"
-            width={1254}
-            height={1254}
+            src={scene}
+            alt="BullWhale captain in a navy coat looks through a telescope from the bow of a wooden ship at sunset."
+            width={1536}
+            height={1024}
           />
         </figure>
       </div>

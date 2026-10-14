@@ -20,7 +20,7 @@ export function ActionLink({
     return (
       <button type="button" className={`${className} is-pending`} disabled>
         {children}
-        <span className="pending-note">{pendingLabel}</span>
+        {pendingLabel ? <span className="pending-note">{pendingLabel}</span> : null}
       </button>
     )
   }

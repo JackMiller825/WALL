@@ -459,7 +459,6 @@ export default function Dashboard() {
                 <li><span>Crew</span><strong>{summary.clicks.crew}</strong></li>
                 <li><span>Telegram</span><strong>{summary.clicks.telegram}</strong></li>
                 <li><span>X</span><strong>{summary.clicks.x}</strong></li>
-                <li><span>Discord</span><strong>{summary.clicks.discord}</strong></li>
               </ul>
             </article>
           </section>
