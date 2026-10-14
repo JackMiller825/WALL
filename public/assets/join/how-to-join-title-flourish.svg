@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" fill="none" role="img" aria-label="Turquoise wave ornament with gold diamond">
+ <path d="M16 58c34-38 68-38 102 0s68 38 102 0 68-38 102 0" stroke="#20BED2" stroke-width="11" stroke-linecap="round"/>
+ <path d="M800 58c-34-38-68-38-102 0s-68 38-102 0-68-38-102 0" stroke="#20BED2" stroke-width="11" stroke-linecap="round"/>
+ <path d="M31 58c26-24 51-24 77 0s51 24 77 0" stroke="#A5F4EF" stroke-width="4" stroke-linecap="round"/>
+ <path d="M769 58c-26-24-51-24-77 0s-51 24-77 0" stroke="#A5F4EF" stroke-width="4" stroke-linecap="round"/>
+ <path d="m400 16 34 34-34 34-34-34 34-34Z" fill="#F9C84B" stroke="#FFF3C6" stroke-width="6"/>
+</svg>

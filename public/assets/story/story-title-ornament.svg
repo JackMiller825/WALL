@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 44" fill="none" role="img" aria-label="Nautical gold and turquoise divider">
+  <path d="M20 22h235M345 22h235" stroke="#F6C94A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 28c11-12 22-12 33 0s22 12 33 0" stroke="#28C4D2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M578 28c-11-12-22-12-33 0s-22 12-33 0" stroke="#28C4D2" stroke-width="3" stroke-linecap="round"/>
+  <path d="m300 5 16 17-16 17-16-17L300 5Z" fill="#F6C94A" stroke="#FFF2C4" stroke-width="2"/>
+  <path d="m270 22 8-8 8 8-8 8-8-8Zm44 0 8-8 8 8-8 8-8-8Z" fill="#2CC6D4" stroke="#FFF4CF" stroke-width="1.5"/>
+</svg>

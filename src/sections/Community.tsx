@@ -1,42 +1,47 @@
-import { communityDestination, httpsUrl, site } from '../config/site.ts'
+import { httpsUrl, site } from '../config/site.ts'
 import { ActionLink } from '../components/ActionLink.tsx'
 
-const scene = '/assets/supplemental/sections/community-dock-scene.png'
-const officialCommunity = httpsUrl(site.telegramUrl) ?? httpsUrl(site.xUrl)
+const officialTelegram = httpsUrl(site.telegramUrl)
 
 export function Community() {
   return (
     <section className="community" id="community" aria-labelledby="community-title">
       <div className="section-inner community-layout">
         <div className="community-copy">
-          <h2 id="community-title">COMMUNITY</h2>
-          <p>
-            Same waves. Stronger together.
-            <br />
-            Join the Whale Street crew and be part of the journey.
-          </p>
-          {officialCommunity ? (
-            <ActionLink href={communityDestination()} className="btn btn-gold" track="community">
+          <div className="section-heading">
+            <h2 id="community-title">COMMUNITY</h2>
+            <img
+              className="title-flourish"
+              src="/assets/community/community-title-flourish.svg"
+              alt=""
+              width={800}
+              height={100}
+            />
+          </div>
+          <p className="community-tagline">Same waves. Stronger together.</p>
+          <p className="community-support">Join the Whale Street crew and be part of the journey.</p>
+          {officialTelegram ? (
+            <ActionLink href={officialTelegram} className="btn btn-gold community-cta" track="community">
+              <img src="/assets/community/telegram.svg" alt="" width={18} height={18} />
               JOIN COMMUNITY
             </ActionLink>
           ) : (
             <div className="pending-action">
-              <ActionLink href={null} className="btn btn-gold" pendingLabel="">
+              <ActionLink href={null} className="btn btn-gold community-cta" pendingLabel="">
                 JOIN COMMUNITY
               </ActionLink>
-              <p className="pending-caption">Coming soon</p>
+              <p className="pending-caption">COMING SOON</p>
             </div>
           )}
         </div>
-        <figure className="community-art">
-          <img
-            src={scene}
-            alt="BullWhale crew on a moonlit dock around an open chest of gold coins, with a crowned captain, an astronaut, a street dancer, and a scientist."
-            width={1672}
-            height={941}
-          />
-        </figure>
       </div>
+      <img
+        className="community-treasure"
+        src="/assets/community/community-reef-treasure-overlay.png"
+        alt="Open treasure chest of gold coins beside a flag bearing a smiling BullWhale, set among coral."
+        width={2172}
+        height={724}
+      />
     </section>
   )
 }

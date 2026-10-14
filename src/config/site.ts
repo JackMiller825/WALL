@@ -16,10 +16,10 @@ export const site = {
 }
 
 export const tokenomics = [
-  { id: 'supply', label: 'Total Supply', value: '1B', icon: '/assets/supplemental/icons/tokenomics/supply.svg' },
-  { id: 'tax', label: 'Tax', value: '0%', icon: '/assets/supplemental/icons/tokenomics/tax.svg' },
-  { id: 'lp', label: 'LP', value: 'Burn', icon: '/assets/supplemental/icons/tokenomics/lp-burn.svg' },
-  { id: 'ownership', label: 'Ownership', value: 'Renounce', icon: '/assets/supplemental/icons/tokenomics/ownership-renounced.svg' },
+  { id: 'supply', label: 'Total Supply', value: '1B', icon: '/assets/tokenomics/icons/supply.svg' },
+  { id: 'tax', label: 'Tax', value: '0%', icon: '/assets/tokenomics/icons/tax.svg' },
+  { id: 'lp', label: 'LP', value: 'Burn', icon: '/assets/tokenomics/icons/lp-burn.svg' },
+  { id: 'ownership', label: 'Ownership', value: 'Renounce', icon: '/assets/tokenomics/icons/ownership-renounced.svg' },
 ] as const
 
 export const navItems = [

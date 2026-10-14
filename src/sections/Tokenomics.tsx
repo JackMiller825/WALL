@@ -1,10 +1,15 @@
 import { tokenomics } from '../config/site.ts'
 
+const flourish = '/assets/tokenomics/tokenomics-title-flourish.svg'
+
 export function Tokenomics() {
   return (
     <section className="token" id="token" aria-labelledby="token-title">
       <div className="section-inner">
-        <h2 id="token-title">TOKENOMICS</h2>
+        <div className="section-heading">
+          <h2 id="token-title">TOKENOMICS</h2>
+          <img className="title-flourish" src={flourish} alt="" width={800} height={100} />
+        </div>
         <ul className="token-grid">
           {tokenomics.map((fact) => (
             <li key={fact.id} className="token-card">
