@@ -25,11 +25,7 @@ export function CharacterGallery() {
               aria-haspopup="dialog"
               aria-label={`Enlarge ${character.name}`}
             >
-              <span className="crew-index" aria-hidden="true">
-                {character.id}
-              </span>
-              <img src={`/assets/characters/${character.file}`} alt="" />
-              <span className="crew-name">{character.name}</span>
+              <img src={`/assets/characters/${character.file}`} alt={character.alt} width={1254} height={1254} />
             </button>
           </li>
         ))}
