@@ -20,9 +20,9 @@
 
 .crew-entrance-kicker {
   margin: 8px 0 0;
-  font-family: var(--font-display);
-  letter-spacing: 0.22em;
-  font-size: 0.82rem;
+  font-family: var(--font-entrance);
+  letter-spacing: 0.18em;
+  font-size: 1.05rem;
   color: var(--gold);
 }
 
@@ -44,9 +44,11 @@
 
 .crew-entrance-stage figcaption {
   margin-top: 8px;
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  letter-spacing: 0.04em;
+  font-family: var(--font-entrance);
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
   text-align: center;
   color: #fff8e8;
   text-shadow: 0 3px 0 #0a3158;
@@ -57,7 +59,7 @@
   align-items: center;
   gap: 12px;
   margin: 0;
-  font-family: var(--font-display);
+  font-family: var(--font-ticker-mono);
   letter-spacing: 0.08em;
 }
 
@@ -86,7 +88,8 @@
   border-radius: 999px;
   background: transparent;
   color: var(--cream);
-  font-family: var(--font-display);
+  font-family: var(--font-action);
+  font-weight: 600;
   letter-spacing: 0.08em;
   cursor: pointer;
 }

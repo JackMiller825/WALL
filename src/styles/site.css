@@ -44,9 +44,10 @@
   border-radius: 999px;
   border: 2px solid transparent;
   text-decoration: none;
-  font-family: var(--font-display);
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-action);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
   line-height: 1;
   cursor: pointer;
   color: var(--navy);
@@ -122,9 +123,9 @@
 }
 
 .brand-name {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-brand);
+  font-size: 1.28rem;
+  letter-spacing: 0.04em;
   line-height: 1;
   white-space: nowrap;
 }
@@ -150,14 +151,22 @@
 .site-nav a {
   color: #f4efe4;
   text-decoration: none;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-family: var(--font-nav);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .site-nav a[aria-current='true'] {
   color: var(--gold);
+}
+
+.site-nav .btn {
+  font-family: var(--font-action);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .nav-toggle {
@@ -252,25 +261,32 @@ section[id] {
 .hero-name,
 .hero-ticker {
   display: block;
-  font-family: var(--font-display);
   letter-spacing: 0.01em;
 }
 
 .hero-name {
   color: #14386a;
-  font-size: clamp(3.2rem, 6.4vw, 6rem);
-  -webkit-text-stroke: 0.04em #f6d98a;
+  font-family: var(--font-brand);
+  font-size: clamp(3.6rem, 7.2vw, 6.6rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.88;
+  -webkit-text-stroke: 0.035em #f6d98a;
   paint-order: stroke fill;
-  text-shadow: 0 0.04em 0 #0b2748;
+  text-shadow: 0 0.045em 0 #0b2748;
 }
 
 .hero-ticker {
-  margin-top: 0.02em;
+  margin-top: 0.04em;
   color: #ff8c1a;
-  font-size: clamp(3.4rem, 6.8vw, 6.4rem);
-  -webkit-text-stroke: 0.04em #16325c;
+  font-family: var(--font-ticker);
+  font-size: clamp(2.8rem, 5.6vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  -webkit-text-stroke: 0.03em #16325c;
   paint-order: stroke fill;
-  text-shadow: 0 0.05em 0 #0c2344;
+  text-shadow: 0 0.06em 0 #0c2344;
 }
 
 .hero-slogan {
@@ -283,10 +299,11 @@ section[id] {
   border-radius: 4px;
   background: linear-gradient(180deg, #f0d7a2 0%, #d7a15a 100%);
   color: #3d2914;
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 1.35vw, 1.2rem);
+  font-family: var(--font-action);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.45vw, 1.28rem);
   line-height: 1.05;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   box-shadow: 3px 4px 0 #6d4218;
   transform: rotate(-1.5deg);
 }
@@ -430,10 +447,11 @@ section[id] {
   border-radius: 8px;
   background: linear-gradient(180deg, #c8883c 0%, #8d4e18 100%);
   color: #fff6df;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-family: var(--font-crew-text);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 0.72rem;
+  font-size: 0.92rem;
   text-align: center;
   box-shadow: 0 3px 0 #5c3010;
 }
@@ -466,8 +484,10 @@ section[id] {
   background: none;
   box-shadow: none;
   color: #fff8e8;
-  font-size: clamp(2rem, 4.2vw, 3.6rem);
-  letter-spacing: 0.03em;
+  font-family: var(--font-crew);
+  font-size: clamp(1.85rem, 3.8vw, 3.35rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
   text-shadow:
     0 3px 0 #0a3158,
     0 0 1px #f6d27a,
@@ -564,8 +584,9 @@ section[id] {
 .lightbox p {
   margin: 8px 0 0;
   text-align: center;
-  font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-family: var(--font-crew-text);
+  font-weight: 700;
+  font-size: 1.55rem;
 }
 
 .lightbox-close {
@@ -625,11 +646,15 @@ section[id] {
 .story-copy h2 {
   margin: 0 0 2px;
   text-align: left;
-  font-size: clamp(3rem, 5.2vw, 4.7rem);
+  font-family: var(--font-story);
+  font-weight: 700;
+  font-size: clamp(2.7rem, 4.6vw, 4.15rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
   color: #fff4d8;
-  -webkit-text-stroke: 0.034em #123a62;
+  -webkit-text-stroke: 0.018em #123a62;
   paint-order: stroke fill;
-  text-shadow: 0 4px 0 #0b2744, 0 10px 18px rgba(8, 24, 48, 0.35);
+  text-shadow: 0 3px 0 #0b2744, 0 10px 18px rgba(8, 24, 48, 0.35);
 }
 
 .story-ornament {
@@ -643,8 +668,9 @@ section[id] {
   text-align: left;
   max-width: 34rem;
   margin: 0 0 20px;
-  font-size: 1.05rem;
-  line-height: 1.55;
+  font-family: var(--font-story-text);
+  font-size: 1.02rem;
+  line-height: 1.72;
   color: #f7fbff;
   text-shadow: 0 2px 10px rgba(8, 28, 52, 0.55);
 }
@@ -738,6 +764,26 @@ section[id] {
   text-shadow: 0 3px 0 #08243f, 0 0 16px rgba(240, 193, 74, 0.28);
 }
 
+.token h2 {
+  font-family: var(--font-token);
+  font-weight: 800;
+  font-size: clamp(3rem, 6.4vw, 5.4rem);
+  letter-spacing: 0.08em;
+  line-height: 0.85;
+}
+
+.join h2 {
+  font-family: var(--font-join);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.community h2 {
+  font-family: var(--font-community);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
 .section-heading {
   position: relative;
   display: grid;
@@ -802,14 +848,20 @@ section[id] {
 .token-label {
   margin: 8px 0 4px;
   color: var(--ocean-mid);
+  font-family: var(--font-nav);
+  font-weight: 700;
+  letter-spacing: 0.16em;
 }
 
 .token-value {
   margin: 4px 0 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2vw, 2rem);
-  letter-spacing: 0;
+  font-family: var(--font-token);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 2.5vw, 2.55rem);
+  letter-spacing: 0.02em;
+  line-height: 0.9;
   text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
   color: var(--navy);
 }
 
@@ -862,21 +914,26 @@ section[id] {
   position: absolute;
   top: -12px;
   left: 12px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: var(--gold);
   color: #1a1408;
-  font-family: var(--font-display);
+  font-family: var(--font-join);
+  font-size: 1rem;
+  line-height: 1;
   box-shadow: 0 3px 0 rgba(90, 54, 8, 0.35);
 }
 
 .join-card h3 {
   margin: 0;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-join-step);
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
   color: var(--cream);
 }
 
@@ -922,15 +979,27 @@ section[id] {
 }
 
 .community-tagline {
-  margin-top: 6px;
-  font-size: 1.2rem;
+  margin-top: 2px;
+  font-family: var(--font-community-script);
+  font-size: clamp(1.85rem, 3.2vw, 2.45rem);
   font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.05;
+  text-transform: none;
 }
 
 .community-support {
-  margin: 6px 0 18px;
-  font-size: 1.05rem;
+  margin: 8px 0 18px;
+  font-family: var(--font-community-text);
+  font-size: 1.08rem;
+  font-weight: 700;
   color: #d7e8f4;
+}
+
+.community .pending-caption {
+  font-family: var(--font-nav);
+  font-weight: 700;
+  letter-spacing: 0.16em;
 }
 
 .community-cta {
@@ -1007,16 +1076,19 @@ section[id] {
 }
 
 .footer-name {
-  font-family: var(--font-display);
-  letter-spacing: 0.06em;
+  font-family: var(--font-footer);
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.1;
 }
 
 .footer-ticker {
   color: var(--gold);
-  font-weight: 800;
+  font-family: var(--font-ticker-mono);
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .site-footer nav ul {
@@ -1035,8 +1107,10 @@ section[id] {
   min-height: 44px;
   padding: 0 2px;
   color: #f4efe4;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-nav);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -1088,9 +1162,10 @@ section[id] {
 .footer-signature p {
   position: absolute;
   margin: 0;
-  letter-spacing: 0.18em;
+  font-family: var(--font-footer);
+  font-weight: 700;
+  letter-spacing: 0.24em;
   font-size: 0.72rem;
-  font-weight: 800;
   color: #7ee7f2;
 }
 
