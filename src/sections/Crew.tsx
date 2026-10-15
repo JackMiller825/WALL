@@ -12,7 +12,7 @@ export function Crew() {
         <header className="crew-heading">
           <img className="crew-title-wave" src={titleWave} alt="" width={2172} height={724} />
           <h2 id="crew-title">MEET THE CREW</h2>
-          <p className="eyebrow">18 BULLWHALES · ONE BIG FAMILY</p>
+          <p className="eyebrow">18 BULLWHALES. ONE BIG FAMILY.</p>
         </header>
         <div className="crew-frame">
           <CharacterGallery />
