@@ -27,7 +27,7 @@ function holdFor(index: number): number {
   if (index <= 0) return 1000
   if (index === 1) return 900
   if (index === 2) return 800
-  return 300
+  return 500
 }
 
 type CrewEntranceProps = {
