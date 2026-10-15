@@ -1,5 +1,6 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react'
 import { startPublicAnalytics } from './analytics/tracker.ts'
+import { CrewEntrance } from './components/CrewEntrance.tsx'
 import { Footer } from './components/Footer.tsx'
 import { Header } from './components/Header.tsx'
 import { isDashboardLocation } from './dashboard/path.ts'
@@ -16,6 +17,11 @@ const Dashboard = lazy(() => import('./dashboard/Dashboard.tsx'))
 
 export function App() {
   const [dashboard, setDashboard] = useState(() => isDashboardLocation())
+  const [intro, setIntro] = useState(() => {
+    if (typeof window === 'undefined' || isDashboardLocation()) return false
+    return !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  })
+  const finishIntro = useCallback(() => setIntro(false), [])
   const activeId = useActiveSection()
 
   useEffect(() => {
@@ -62,23 +68,26 @@ export function App() {
 
   return (
     <>
-      <a className="skip-link" href="#home">
-        Skip to content
-      </a>
-      <Header activeId={activeId} />
-      <main>
-        <Hero />
-        <Crew />
-        <Story />
-        <div className="ocean-run">
-          <WaveDivider />
-          <Tokenomics />
-          <HowToJoin />
-          <WaveDivider className="wave-divider-before-community" />
-          <Community />
-        </div>
-      </main>
-      <Footer />
+      {intro && <CrewEntrance onDone={finishIntro} />}
+      <div aria-hidden={intro || undefined}>
+        <a className="skip-link" href="#home">
+          Skip to content
+        </a>
+        <Header activeId={activeId} />
+        <main>
+          <Hero />
+          <Crew />
+          <Story />
+          <div className="ocean-run">
+            <WaveDivider />
+            <Tokenomics />
+            <HowToJoin />
+            <WaveDivider className="wave-divider-before-community" />
+            <Community />
+          </div>
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
