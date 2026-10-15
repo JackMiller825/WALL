@@ -35,6 +35,14 @@
   animation-fill-mode: both;
 }
 
+.crew-entrance-loading {
+  margin: 0;
+  font-family: var(--font-entrance);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: 0.04em;
+  color: #fff8e8;
+}
+
 .crew-entrance-stage img {
   width: min(460px, 72vw);
   height: min(52vh, 460px);
